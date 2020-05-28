@@ -1,0 +1,23 @@
+<template>
+    <lightning-card icon-name="action:clone" title="Local Network Files">
+
+        <div class="pad">
+
+            <h2>Location Path</h2>
+            <lightning-input
+                placeholder="Enter in a path to a directory or file"
+                onchange={handleInput}
+            ></lightning-input>
+            
+            <template if:true={link_href}>
+                <br />
+                
+                <h2>Link</h2>
+                <a download href={link_href}>
+                    {link_text}
+                </a>
+            </template>
+        </div>
+        
+    </lightning-card>
+</template>
